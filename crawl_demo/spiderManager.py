@@ -12,7 +12,7 @@ class SpiderManager(object):
 		self.result_manager = ResultManager()
 	
 	
-	def crawl(self,url):
+	def crawl(self,url,count_limited):
 		count = 1
 		self.url_manager.add_new_url(url)
 		while self.url_manager.has_new_url():
@@ -28,7 +28,7 @@ class SpiderManager(object):
 				continue
 			finally:
 				count += 1
-				if count > 50:
+				if count > count_limited:
 					break
 			
 		self.result_manager.output_result()

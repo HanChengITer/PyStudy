@@ -20,9 +20,8 @@ class ResultManager(object):
 			
 			for data_dict in self.data_dict_list:
 				fout.write('<tr>\n')
-				fout.write('<td>%s</td>\n' % data_dict['title'])
-				# fout.write('<td>%s</td>\n' % data_dict['url'])
-				fout.write('<td>%s</td>\n' % data_dict['content'])
+				fout.write('<td width=15%%><a href="%s" target="_blank">%s</a></td>\n' % (data_dict['url'], data_dict['title']))
+				fout.write('<td width=80%%>%s</td>\n' % data_dict['content'])
 				fout.write('</tr>\n')
 			
 			fout.write('</table>\n')
