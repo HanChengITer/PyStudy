@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>自制简易计算器demo</title>
+</head>
+<body>
+    <h1>加法</h1>
+    <p>
+        <h2>用途</h2>
+        <strong>支持两位数的加法</strong><br>
+        <h2>使用方法</h2>
+        <ul>
+            <li>{% url 'calc_add_with_params' %}?x=3&y=4</li>
+            <li>{% url 'calc_add' 3 4 %}</li>
+        </ul>
+    <p>
+
+</body>
+</html>
